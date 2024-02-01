@@ -66,7 +66,7 @@ public class test {
 
     @Test
     @DisplayName("이름 조회")
-    public void FindByName()
+    void FindByName()
     {
        //MemberService memberService = applicationContext.getBean("test", MemberService.class);
         MemberService memberService = applicationContext.getBean(MemberService.class);
@@ -82,9 +82,41 @@ public class test {
 
     @Test
     @DisplayName("타입조회")
-    public void FindByNameTypeCheck()
+    void FindByNameTypeCheck()
     {
         MemberServiceImpl memberService = applicationContext.getBean(MemberServiceImpl.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
+
+    @Test
+    @DisplayName("ConfigTest클래스 참조 : 싱글톤 테스트 해보기")
+    void SingleTonTest()
+    {
+        ConfigTest configTest = ConfigTest.getInstance();
+        ConfigTest configTest2 = ConfigTest.getInstance();
+        assertThat(configTest).isEqualTo(configTest2);
+    }
+
+    @Test
+    @DisplayName("기존 Appconfing 객체 생성전과 후에 싱글톤 적용")
+    void StingleToneContainer()
+    {
+        //AppConfig appConfig = new AppConfig();
+        ApplicationContext AC = new AnnotationConfigApplicationContext(AppConfig.class);
+        //memberService = appConfig.memberService();
+        // 주소값이 같다.
+        MemberService MS1 = AC.getBean(memberService.getClass());
+        MemberService MS2 = AC.getBean(memberService.getClass());
+
+        // 그결과 Spring Boot에 싱글톤 방식으로 실행된다.
+
+        //orderService = appConfig.orderService();
+        OrderService OS = AC.getBean(orderService.getClass());
+        //System.out.println(memberService);
+        //System.out.println(orderService);
+        //assertThat(memberService).isEqualTo(orderService);
+        assertThat(MS1).isEqualTo(MS2);
+
+    }
+
 }
