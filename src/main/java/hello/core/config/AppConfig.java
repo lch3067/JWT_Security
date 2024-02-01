@@ -15,6 +15,14 @@ import org.springframework.context.annotation.Configuration;
 // xml, Appconfig.class 등 여러 방식이 존재함
 
 // Component
+
+
+//2024-02-01
+// 지속적인 고객의 Request로 인해 서버 부하 발생가능
+// 싱글톤 패턴 하여 개선하는 중
+// 개선 방법
+// 하나의 객체를 생성해서 공유하게끔 하는 방법으로 가면됩니다.
+
 @Configuration
 public class AppConfig {
 
