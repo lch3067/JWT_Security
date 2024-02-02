@@ -1,4 +1,4 @@
-package hello.core.Discount;
+package hello.core.Discount.ConfigurationBeanStorageTest;
 
 import hello.core.config.AppConfig;
 import org.junit.jupiter.api.DisplayName;

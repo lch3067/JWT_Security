@@ -15,8 +15,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     public Order createOrder(Long memberId, String itemName, int iTemPrice, int discount) {
-        Member byId = this.memberrepository.findById(memberId);
-        int discountPrice = this.discountPolicy.Orderdiscount(byId, iTemPrice);
+        Member byId = memberrepository.findById(memberId);
+        int discountPrice = discountPolicy.Orderdiscount(byId, iTemPrice);
         return new Order(memberId, itemName, iTemPrice, discountPrice);
     }
 }

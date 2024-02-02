@@ -1,17 +1,16 @@
 package hello.core.Discount;
 
+import hello.core.Discount.SingleToneTest.ConfigTest;
 import hello.core.Entity.Member;
 import hello.core.Entity.Order;
 import hello.core.config.AppConfig;
 import hello.core.memberEnum.Grade;
 import hello.core.service.MemberService;
 import hello.core.service.MemberServiceImpl;
-import hello.core.service.OTTService;
 import hello.core.service.OrderService;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -51,6 +50,7 @@ public class test {
     MemberService memberService = applicationContext.getBean("test", MemberService.class);
     OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
     @Test
+    @Disabled
     void SpringbootTest()
     {
         Member member = new Member(23L, "이충현", Grade.VIP);
@@ -66,6 +66,7 @@ public class test {
 
     @Test
     @DisplayName("이름 조회")
+    @Disabled
     void FindByName()
     {
        //MemberService memberService = applicationContext.getBean("test", MemberService.class);
@@ -82,6 +83,7 @@ public class test {
 
     @Test
     @DisplayName("타입조회")
+    @Disabled
     void FindByNameTypeCheck()
     {
         MemberServiceImpl memberService = applicationContext.getBean(MemberServiceImpl.class);
@@ -90,6 +92,7 @@ public class test {
 
     @Test
     @DisplayName("ConfigTest클래스 참조 : 싱글톤 테스트 해보기")
+    @Disabled
     void SingleTonTest()
     {
         ConfigTest configTest = ConfigTest.getInstance();
@@ -106,16 +109,47 @@ public class test {
         //memberService = appConfig.memberService();
         // 주소값이 같다.
         MemberService MS1 = AC.getBean(memberService.getClass());
+        Member member1 = new Member(23L, "이충현", Grade.BASIC);
+        MS1.join(member1);
+
         MemberService MS2 = AC.getBean(memberService.getClass());
+        Member member2 = new Member(24L, "이충현", Grade.VIP);
+        MS2.join(member2);
+
 
         // 그결과 Spring Boot에 싱글톤 방식으로 실행된다.
 
         //orderService = appConfig.orderService();
-        OrderService OS = AC.getBean(orderService.getClass());
+
+
         //System.out.println(memberService);
         //System.out.println(orderService);
         //assertThat(memberService).isEqualTo(orderService);
         assertThat(MS1).isEqualTo(MS2);
+
+
+        OrderService OS1 = AC.getBean(orderService.getClass());
+        OrderService OS2 = AC.getBean(orderService.getClass());
+
+        assertThat(OS1).isEqualTo(OS2);
+
+        // 항상 Stateless 방식으로 개발하라, 공유필드는 조심해라
+
+        // 여기의 문제점 A라는 유저가
+        Order result1 = OS1.createOrder(23L, "숙주", 1500, 500);
+        Order result2 = OS2.createOrder(24L, "가지", 1500, 500);
+
+
+
+
+        System.out.println(result1.toString());
+        System.out.println(result1.CalculationDiscountPirce());
+        System.out.println(result2.toString());
+        System.out.println(result2.CalculationDiscountPirce());
+
+
+        // A 사용자와 B 사용자가 인스턴스가 같다. 같은 객체 생성으로[싱글톤의 문제]
+        assertThat(OS1).isEqualTo(OS2);
 
     }
 

@@ -6,8 +6,19 @@ import hello.core.memberEnum.Grade;
 public class RateDiscountPolicy implements DiscountPolicy {
     private int discountPercent = 10;
 
+    private int resultPrice = 0;
     public int Orderdiscount(Member member, int price) {
-        return member.getGrade() == Grade.VIP ? price * this.discountPercent / 100 : 0;
+        switch (member.getGrade()) {
+            case VIP:
+                resultPrice = price - 100;
+                break;
+            case BASIC:
+                resultPrice = price - 50;
+                break;
+            default:
+                resultPrice = price - 10;
+        }
+        return resultPrice;
     }
 
     public int OTTDiscouunt(Member member, int OTTPrice) {

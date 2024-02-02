@@ -1,13 +1,4 @@
-package hello.core.Discount;
-
-import hello.core.config.AppConfig;
-import hello.core.service.MemberService;
-import hello.core.service.OrderService;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import static org.assertj.core.api.Assertions.*;
+package hello.core.Discount.SingleToneTest;
 
 public class ConfigTest {
 

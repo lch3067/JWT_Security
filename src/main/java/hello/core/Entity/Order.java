@@ -1,6 +1,21 @@
 package hello.core.Entity;
 
 public class Order {
+
+
+    private Long memberId;
+    private String itemName;
+    private int itemPrice;
+    private int discountPirce;
+
+
+    public Order(Long memberId, String itemName, int itemPrice, int discountPirce) {
+        this.memberId = memberId;
+        this.itemName = itemName;
+        this.itemPrice = itemPrice;
+        this.discountPirce = discountPirce;
+
+    }
     public Long getMemberId() {
         return memberId;
     }
@@ -33,20 +48,15 @@ public class Order {
         this.discountPirce = discountPirce;
     }
 
-    public Order(Long memberId, String itemName, int itemPrice, int discountPirce) {
-        this.memberId = memberId;
-        this.itemName = itemName;
-        this.itemPrice = itemPrice;
-        this.discountPirce = discountPirce;
-    }
 
-    private Long memberId;
-    private String itemName;
-    private int itemPrice;
-    private int discountPirce;
+
+
+
+
 
 
     public int CalculationDiscountPirce() {
+
         return this.itemPrice - this.discountPirce;
     }
 

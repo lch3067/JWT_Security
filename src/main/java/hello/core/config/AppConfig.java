@@ -2,6 +2,7 @@ package hello.core.config;
 
 import hello.core.Order.discount.DiscountPolicy;
 import hello.core.Order.discount.FixDiscountPolicy;
+import hello.core.Order.discount.RateDiscountPolicy;
 import hello.core.Repository.Repository.Memberrepository;
 import hello.core.Repository.Repository.MemoryMemberRepository;
 import hello.core.service.*;
@@ -38,6 +39,14 @@ public class AppConfig {
         return instance;
     }*/
 
+    // 하지만, 위코드를 사용하지 않는 이유 : 이미 싱글톤 패턴을 적용하여 spring에서 관리해줍니다.
+
+
+    // 여기서 궁금한 점
+    // memberService -> memberrepository() 호출하는 것
+    // orderService -> memberrepository() 호출
+    // 이미 memberrepository를 호출하였는데, 왜? 또 다른 것을 호출하는 것인지? 제대로 호출 되는 것인지 궁금함
+    // AppConfigTest로 테스트 진행
     @Bean(name = "test")
     public MemberService memberService() {
         return new MemberServiceImpl(memberrepository());
@@ -60,7 +69,7 @@ public class AppConfig {
 
     @Bean
     public static DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
 }
