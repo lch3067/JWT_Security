@@ -15,4 +15,7 @@ public class MemoryMemberRepository implements Memberrepository {
     public Map<Long, Member> findByAll() {
         return store;
     }
+
+
+
 }

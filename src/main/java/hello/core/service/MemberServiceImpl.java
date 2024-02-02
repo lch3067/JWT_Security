@@ -11,15 +11,23 @@ public class MemberServiceImpl implements MemberService {
         this.memberrepository = memberrepository;
     }
 
+
+    @Override
     public void join(Member member) {
         this.memberrepository.save(member);
     }
 
+    @Override
     public Member findMember(Long memberId) {
         return this.memberrepository.findById(memberId);
     }
-
+    @Override
     public Map<Long, Member> findAllMember() {
         return this.memberrepository.findByAll();
+    }
+
+    public Memberrepository getmemberrepository()
+    {
+        return memberrepository;
     }
 }

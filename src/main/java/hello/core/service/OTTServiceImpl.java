@@ -14,9 +14,15 @@ public class OTTServiceImpl implements OTTService {
         this.discountPolicy = discountPolicy;
     }
 
+
     public OTT JoinOTT(Long memberId, String subject, int price, String kind, int discountPirce) {
         Member byId = this.memberrepository.findById(memberId);
         int dicountPrice = this.discountPolicy.OTTDiscouunt(byId, price);
         return new OTT(memberId, subject, price, kind, dicountPrice);
+    }
+
+    public Memberrepository getoottrrepository()
+    {
+        return memberrepository;
     }
 }

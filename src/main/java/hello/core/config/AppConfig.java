@@ -47,7 +47,7 @@ public class AppConfig {
     // orderService -> memberrepository() 호출
     // 이미 memberrepository를 호출하였는데, 왜? 또 다른 것을 호출하는 것인지? 제대로 호출 되는 것인지 궁금함
     // AppConfigTest로 테스트 진행
-    @Bean(name = "test")
+    @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberrepository());
     }
@@ -62,14 +62,24 @@ public class AppConfig {
         return new OTTServiceImpl(memberrepository(), discountPolicy());
     }
 
+    // static을 사용하게 되면, 싱글톤 영향을 줌
+    // static의 성격 전역으로 공유함 하지만 싱글톤의 성격 한개의 클래스 메소드로 여러 객체를 관리함
+    /*  @Bean
+        private static Memberrepository memberrepository() {
+            return new MemoryMemberRepository();
+        }
+
+        @Bean
+        public static DiscountPolicy discountPolicy() {
+            return new RateDiscountPolicy();
+    }*/
     @Bean
-    private static Memberrepository memberrepository() {
+    public Memberrepository memberrepository() {
         return new MemoryMemberRepository();
     }
 
     @Bean
-    public static DiscountPolicy discountPolicy() {
+    public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
-
 }

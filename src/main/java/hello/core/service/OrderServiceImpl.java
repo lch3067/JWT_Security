@@ -19,4 +19,9 @@ public class OrderServiceImpl implements OrderService {
         int discountPrice = discountPolicy.Orderdiscount(byId, iTemPrice);
         return new Order(memberId, itemName, iTemPrice, discountPrice);
     }
+
+    public Memberrepository getordererrepository()
+    {
+        return memberrepository;
+    }
 }
