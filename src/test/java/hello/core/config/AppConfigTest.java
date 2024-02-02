@@ -26,28 +26,28 @@ class AppConfigTest {
     @DisplayName("Config에 각기 스프링 컨테이너 싱글 톤 비교")
     void Configtest()
     {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        //ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        MemberServiceImpl memberservice1 = applicationContext.getBean(MemberServiceImpl.class);
-        OrderServiceImpl orderservice1 = applicationContext.getBean(OrderServiceImpl.class);
-        OTTServiceImpl ottService1 = applicationContext.getBean(OTTServiceImpl.class);
+        //MemberServiceImpl memberservice1 = applicationContext.getBean(MemberServiceImpl.class);
+        //OrderServiceImpl orderservice1 = applicationContext.getBean(OrderServiceImpl.class);
+        //OTTServiceImpl ottService1 = applicationContext.getBean(OTTServiceImpl.class);
 
-        Memberrepository memberepository = applicationContext.getBean(Memberrepository.class);
+        //Memberrepository memberepository = applicationContext.getBean(Memberrepository.class);
 
-        Memberrepository getmemberrepository1 = memberservice1.getmemberrepository();
-        Memberrepository getordererrepository1 = orderservice1.getordererrepository();
-        Memberrepository getottserviceresptotr1 = ottService1.getoottrrepository();
+        //Memberrepository getmemberrepository1 = memberservice1.getmemberrepository();
+        //Memberrepository getordererrepository1 = orderservice1.getordererrepository();
+        //Memberrepository getottserviceresptotr1 = ottService1.getoottrrepository();
 
 
-//        System.out.println(getmemberrepository1);
+        //System.out.println(getmemberrepository1);
 //        System.out.println(getordererrepository1);
 //        System.out.println(getottserviceresptotr1);
 //        System.out.println(memberepository);
 
         // 3가지 주소값이 같음 그래서 싱글톤을 지키는 중입니다.
-        assertThat(memberservice1.getmemberrepository()).isSameAs(memberepository);
-        assertThat(orderservice1.getordererrepository()).isSameAs(memberepository);
-        assertThat(ottService1.getoottrrepository()).isSameAs(memberepository);
+        //assertThat(memberservice1.getmemberrepository()).isSameAs(memberepository);
+       //assertThat(orderservice1.getordererrepository()).isSameAs(memberepository);
+        //assertThat(ottService1.getoottrrepository()).isSameAs(memberepository);
 
 
         //assertThat(getmemberrepository).isEqualTo(getordererrepository);

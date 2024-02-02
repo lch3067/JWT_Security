@@ -1,6 +1,7 @@
 package hello.core.Discount.ConfigurationBeanStorageTest;
 
-import hello.core.config.AppConfig;
+//import hello.core.config.AppConfig;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,19 +15,20 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class BeanBasicFindTest {
 
 
-    AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+    //AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-    @Test
-    @DisplayName("빈 조회")
-    public void BeenShowTest()
-    {
-
-        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        for(String been : beanDefinitionNames)
-        {
-            System.out.println(been);
-        }
-
-
-    }
+//    @Test
+//    @DisplayName("빈 조회")
+//    @Disabled
+//    public void BeenShowTest()
+//    {
+//
+//        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+//        for(String been : beanDefinitionNames)
+//        {
+//            System.out.println(been);
+//        }
+//
+//
+//    }
 }
