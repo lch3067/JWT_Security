@@ -1,0 +1,44 @@
+{{>layout/header}}
+<div class="container">
+    <div class="input-form-backgroud row">
+        <div class="input-form col-md-12 mx-auto">
+            <div class="AllLoginform">
+                <div class="col-md-12">
+                    <div calss="row">
+                        <div class="col-md-6">
+                            <a href="/join" role="button" class="btn btn-primary">글 등록</a>
+                            <a href="/" role="button" class="btn btn-primary">메인</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <table class="table table-horizontal table-bordered">
+                    <thead class="thead-strong">
+                    <tr>
+                        <td>ID</td>
+                        <td>회원이름</td>
+                        <td>역할</td>
+                        <td>이메일</td>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    {{#posts}} <!-- (1) -->
+                    <tr>
+                        <td>{{Stride}}</td> <!-- (2) -->
+                        <!-- <td><a href="/posts/update/{.{id}.}">{.{title}.}</a></td> -->
+                        <td>{{username}}</td>
+                        <td>{{role}}</td>
+                        <td>{{email}}</td>
+                    </tr>
+                    {{/posts}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{{>layout/header}}
