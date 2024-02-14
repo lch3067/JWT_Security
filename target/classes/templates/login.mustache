@@ -1,0 +1,26 @@
+{{>layout/header}}
+<div class="container">
+    <div class="input-form-backgroud row">
+        <div class="input-form col-md-12 mx-auto">
+            <div class="AllLoginform">
+                <h4 class="mb-3">로그인</h4>
+                <hr>
+                <form action="/loginProc" method="post" name="loginForm" >
+                    <div class="mb-3">
+                        <label for="Stride" class="form-label">아이디 입력</label>
+                        <input id="Stride" class="form-control" type="text" name="Stride" placeholder="Stride"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="value2" class="form-label">비밀번호 입력</label>
+                        <input id="value2" class="form-control" type="password" name="password" placeholder="password"/>
+                    </div>
+                    <div class="col-12">
+                        <input type="submit" class="btn btn-primary" value="login"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{>layout/header}}
