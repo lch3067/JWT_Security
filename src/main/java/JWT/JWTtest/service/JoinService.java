@@ -4,11 +4,13 @@ import JWT.JWTtest.Entity.User;
 import JWT.JWTtest.dto.JoinDto;
 import JWT.JWTtest.repository.Userrepository;
 import lombok.RequiredArgsConstructor;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 // 가입을 위한 서비스
-
 @Service
 @RequiredArgsConstructor
 public class JoinService {
@@ -18,6 +20,8 @@ public class JoinService {
     // 더 추가해야 할 메소드
         // 현재 회원이 존재하는지 파악하기?
         // 비밀번호 일치하는지?
+
+
     public Boolean JoinProcess(JoinDto joinDto){
 
         Boolean result = userrepository.existsByStride(joinDto.getStride());

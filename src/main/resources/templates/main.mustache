@@ -1,5 +1,4 @@
 {{>layout/header}}
-
 <div class="container">
     <div class="input-form-backgroud row">
         <div class="input-form col-md-12 mx-auto">
@@ -7,10 +6,10 @@
                 <h4 class="mb-3">메인창</h4>
                 <hr>
                 <ul>
-                    <li>
-                        <a href="/join">회원가입</a>
-                    </li>
                     {{^isAuthenticated}}
+                        <li>
+                            <a href="/join">회원가입</a>
+                        </li>
                         <li>
                             <a href="/login">로그인</a>
                         </li>
@@ -19,17 +18,16 @@
                         <li>
                             <a href="/logout">로그아웃</a>
                         </li>
+                        <li>
+                            <a href="/admin">관리자</a>
+                        </li>
+                        <li>
+                            <a href="/AllMember">맴버 조회</a>
+                        </li>
                     {{/isAuthenticated}}
-                    <li>
-                        <a href="/admin">관리자</a>
-                    </li>
-                    <li>
-                        <a href="/AllMember">맴버 조회</a>
-                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-
 {{>layout/header}}

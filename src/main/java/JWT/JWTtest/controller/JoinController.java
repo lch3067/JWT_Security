@@ -4,10 +4,12 @@ import JWT.JWTtest.dto.JoinDto;
 import JWT.JWTtest.service.JoinService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,11 +39,15 @@ public class JoinController {
         Boolean result = joinService.JoinProcess(joinDto);
         if(result)
         {
-            return "redirect:/login";
+            return "redirect:/SuccessfullJoin";
         }else{
-
             return "redirect:/join";
         }
+    }
 
+    @GetMapping("/SuccessfullJoin")
+    public void SuccessfullJoin(JoinDto joinDto, Model model)
+    {
+        model.addAttribute("Coment",joinDto.getUsername() + "회원가입이 정상적으로 처리되었습니다.");
     }
 }

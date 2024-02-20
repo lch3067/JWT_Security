@@ -33,7 +33,7 @@ public class SecurityConfig{
         http
                 .authorizeHttpRequests((auth) ->auth
                         // 회원가입하지않은 사람, 방문자 등 접근 가능
-                        .requestMatchers("/", "/login", "/join","/joinProc").permitAll()
+                        .requestMatchers("/", "/login", "/join","/joinProc","/SuccessfullJoin").permitAll()
                         .requestMatchers("/admin", "/AllMember").hasRole("ADMIN")
                         .requestMatchers("/my/**").hasAnyRole("ADMIN", "USER")
                         .anyRequest().authenticated()

@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f608c69f-cd60-47b1-a694-ba6ddddcf3a0" name="Changes" comment="" />
+    <list default="true" id="f608c69f-cd60-47b1-a694-ba6ddddcf3a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JWT/JWTtest/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JWT/JWTtest/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JWT/JWTtest/controller/JoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JWT/JWTtest/controller/JoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JWT/JWTtest/service/JoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JWT/JWTtest/service/JoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/JwTtestApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/JwTtestApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/JoinController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/JoinController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/maincontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/controller/maincontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/dto/CustomUserDeatils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/dto/CustomUserDeatils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/dto/JoinDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/dto/JoinDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/dto/PostDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/dto/PostDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/repository/Userrepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/repository/Userrepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/service/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/service/CustomUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/service/JoinService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/service/JoinService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JWT/JWTtest/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JWT/JWTtest/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.mustache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +45,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "lch3067"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lch3067&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -48,7 +73,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2cKp8ENTjdTcdmgVEb8c05F721k" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -77,6 +104,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Personal\JWT_Security-Dev\src\main\resources\templates" />
       <recent name="C:\Personal\JWT_Security-Dev\src\main\java\JWT\JWTtest" />
     </key>
   </component>
@@ -112,19 +140,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="JWTtest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="JWTtest" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="JwTtestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="JWTtest" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="JWT.JWTtest.JwTtestApplication" />
@@ -149,7 +164,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0b15a6ad-a4b6-487c-95b7-7633cd092ef5" name="Changes" comment="" />
+      <changelist id="f608c69f-cd60-47b1-a694-ba6ddddcf3a0" name="Changes" comment="" />
       <created>1707869964036</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -161,6 +176,19 @@
       <workItem from="1707893453574" duration="191000" />
       <workItem from="1707893656492" duration="129000" />
       <workItem from="1707893819097" duration="3799000" />
+      <workItem from="1707955190494" duration="6746000" />
+      <workItem from="1707964249779" duration="738000" />
+      <workItem from="1707970265334" duration="9000" />
+      <workItem from="1707974759977" duration="890000" />
+      <workItem from="1707975978588" duration="792000" />
+      <workItem from="1707977096574" duration="208000" />
+      <workItem from="1707977522328" duration="678000" />
+      <workItem from="1707981405113" duration="220000" />
+      <workItem from="1708320171178" duration="1086000" />
+      <workItem from="1708326111276" duration="877000" />
+      <workItem from="1708330818021" duration="12000" />
+      <workItem from="1708331155785" duration="286000" />
+      <workItem from="1708331619557" duration="1266000" />
     </task>
     <servers />
   </component>
